@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script>
+        //        var imgArray = ["loc_portrait1.jpg", "loc_portrait2.jpg", "loc_portrait3.jpg", "loc_portrait4.jpg", "loc_portrait5.jpg"];
+        //        var imgArrLength = imageArray.length;
+        //        for (i = 0; i <= imageArray.length; i++) {
+        //            $('<img />').attr('src', 'images/' + imageArray[i]).load(function () {
+        //                $('.gallery').append($(this));
+        //            });
+        //        }
+
+        $(document).ready(function () {
+            $('.genre').first().delegate('.album-cover', 'click', function () {
+                $(this).clone().addClass('rock').appendTo('.genre:first');
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="genre">
+        genre 1
+        <div class="album-cover">
+            cover 1
+        </div>
+    </div>
+    <div class="genre">
+        genre 2
+        <div class="album-cover">
+            cover 2
+        </div>
+    </div>
+    <div class="genre">
+        genre 3
+        <div class="album-cover">
+            cover 3
+        </div>
+    </div>
+    <!--<h1>
+        Hello jQuery.</h1>
+    <div class="gallery">
+    </div>-->
+</body>
+</html>
